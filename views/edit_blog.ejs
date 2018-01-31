@@ -1,0 +1,11 @@
+<% include partials/head_btitle %>
+    <title>Blog App | Edit - <%= blog.title %> | Kaylen Travis Pillay</title>
+<% include partials/head_atitle %>
+    <h1>Edit : <%= blog.title %></h1>
+    <form id="new_blog_form" action="/blogs/<%= blog._id %>?_method=PUT" method="POST">
+        <input type="text" name="title" placeholder="title" style="display: block;" value="<%= blog.title %>">
+        <textarea name="body" form="new_blog_form" cols="30" rows="10" spellcheck="true" style="display: block;"><%= blog.body %></textarea>
+        <button>Edit</button>
+    </form>
+    <a href="/blogs">Go Back</a>
+<% include partials/foot %>

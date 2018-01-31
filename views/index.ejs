@@ -1,0 +1,19 @@
+<% include partials/head_btitle %>
+    <title>Blog App | Blogs | Kaylen Travis Pillay</title>
+<% include partials/head_atitle %>
+    <h1>RESTful Blog App | Kaylen Travis Pillay</h1>
+    <button role="link"><a href="/blogs/new">Add new blog post</a></button>
+    <ul>
+    <% blogs.forEach(function(blog){ %>
+        <li>
+            <% var short_body = blog.body.substring(0, 50) + "..."; %>
+            <%= blog.title %> : <%= short_body %>
+            <button><a href="/blogs/<%= blog._id %>">View</a></button>
+            <button><a href="/blogs/<%= blog._id %>/edit">Edit</a></button>
+            <form action="/blogs/<%= blog._id %>?_method=DELETE" method="POST" style="display: inline-block;">
+                <button>Delete</button>
+            </form>
+        </li>
+    <% })%>
+    </ul>
+<% include partials/foot %>
