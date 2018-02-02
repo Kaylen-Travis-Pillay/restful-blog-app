@@ -1,0 +1,46 @@
+<% include partials/head_btitle %>
+<title>Restful Blog App | Home | Kaylen Travis Pillay</title>
+<% include partials/head_atitle %>
+
+<div class="ui container segment">
+    <div class="ui center aligned icon header">
+        <i class="settings icon"></i>
+        <div class="content">
+            RESTful Blog Posts
+            <div class="sub header">
+                All posts. Welcome World to a peak into the mind of RESTful Blog
+            </div>
+        </div>
+    </div>
+    <h4 class="ui horizontal divider header">
+        <i class="newspaper icon"></i>
+        Posts
+    </h4>
+<% blogs.forEach(function(blog){ %>
+    <div class="ui container segment">
+        <div class="ui grid">
+            <div class="four wide column">
+                <img class="ui centered small image" src="<%= blog.image %>">
+            </div>
+            <div class="twelve wide column">
+                <p>
+                    <%= blog.body.substring(0,200) %>...
+                    <br>
+                    <strong>
+                        <em>
+                            <span><%= blog.created %></span>
+                        </em>
+                    </strong>
+                </p>
+                <div class="ui mini button">
+                    <i class="heart icon"></i>
+                    <a href="/blogs/<%= blog._id %>">
+                        View Post
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+<%});%>
+</div>
+<% include partials/foot %>

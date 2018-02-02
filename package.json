@@ -1,0 +1,28 @@
+{
+  "name": "restful-blog-app",
+  "version": "1.0.0",
+  "description": "A blog web-app",
+  "main": "app.js",
+  "dependencies": {
+    "body-parser": "^1.18.2",
+    "ejs": "^2.5.7",
+    "express": "^4.16.2",
+    "method-override": "^2.3.10",
+    "mongoose": "^5.0.2",
+    "semantic-ui": "^2.2.14"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Kaylen-Travis-Pillay/restful-blog-app.git"
+  },
+  "author": "Kaylen Travis Pillay",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Kaylen-Travis-Pillay/restful-blog-app/issues"
+  },
+  "homepage": "https://github.com/Kaylen-Travis-Pillay/restful-blog-app#readme"
+}

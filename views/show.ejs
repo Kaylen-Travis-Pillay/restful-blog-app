@@ -1,0 +1,29 @@
+<% include partials/head_btitle %>
+<title>Restful Blog App | <%= blog.title %> | Kaylen Travis Pillay</title>
+<% include partials/head_atitle %>
+<div class="ui segment container">
+    <h1 class="ui center aligned header">
+        <div class="content">
+            <%= blog.title %>
+            <div class="sub header">
+                <%= blog.created %>
+            </div>
+        </div>
+    </h1>
+    <h4 class="ui horizontal divider">
+        <i class="newspaper icon"></i>
+    </h4>
+    <img class="ui centered large image" src="<%= blog.image %>">
+    <div class="ui basic segment container">
+        <p><%= blog.body %></p>
+    </div>
+    <div class="ui basic yellow button">
+        <a href="/blogs/<%= blog._id %>/edit">Edit</a>
+    </div>
+    <form action="/blogs/<%= blog._id %>?_method=DELETE" method="POST" style="display: inline-block">
+        <button class="ui basic red button">
+            <a>Remove</a>
+        </button>
+    </form>
+</div>
+<% include partials/foot %>

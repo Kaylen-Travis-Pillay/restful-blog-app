@@ -1,0 +1,45 @@
+<% include partials/head_btitle %>
+<title>RESTful Blog | New Post | Kaylen Travis Pillay</title>
+<% include partials/head_atitle %>
+    
+    <div class="ui bottom attached center aligned container">
+        <h1 class="ui icon header">
+            <i class="heart icon"></i>
+            <div class="content">
+                New Blog Post
+                <div class="sub header">
+                    Get your message out to the world!
+                </div>
+            </div>
+        </h1>
+    </div>
+    <div class="ui container teal segment">
+        <form id="new-blog-form" class="ui form" action="/blogs" method="POST">
+            <div class="field">
+                <label for="title">Title</label>
+                <input type="text" name="blog[title]" id="title" placeholder="Title of post">
+            </div>
+            <div class="field">
+                <label for="image-url">Image URL</label>
+                <input type="text" name="blog[image]" id="image-url" placeholder="http://someurl/yourimage.png">
+            </div>
+            <div class="field">
+                <label for="post-body">Post Body</label>
+                <textarea name="blog[body]" id="post-body" form="new-blog-form" spellcheck="true" placeholder="Body of post"></textarea>
+            </div>
+            <div class="field">
+                <button class="ui basic teal animated fade button">
+                    <div class="visible content">
+                        <i class="checkmark icon"></i>
+                        Submit
+                    </div>
+                    <div class="hidden content">
+                        Create my post
+                    </div>
+                </button>
+            </div>
+            <div class="ui error message"></div>
+        </form>
+    </div>
+
+<% include partials/foot %>
