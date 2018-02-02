@@ -17,12 +17,12 @@
     <div class="ui basic segment container">
         <p><%= blog.body %></p>
     </div>
-    <div class="ui basic yellow button">
-        <a href="/blogs/<%= blog._id %>/edit">Edit</a>
-    </div>
+    <a href="/blogs/<%= blog._id %>/edit" class="ui basic yellow button">
+        Edit
+    </a>
     <form action="/blogs/<%= blog._id %>?_method=DELETE" method="POST" style="display: inline-block">
         <button class="ui basic red button">
-            <a>Remove</a>
+            Remove
         </button>
     </form>
 </div>

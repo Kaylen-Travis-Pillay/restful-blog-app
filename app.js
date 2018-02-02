@@ -76,7 +76,30 @@ app.get("/blogs/:id/edit", function(req, res){
 });
 
 // UPDATE
+app.put("/blogs/:id", function(req, res){
+    Blog.findByIdAndUpdate(req.params.id, {
+        title: req.body.blog.title,
+        image: req.body.blog.image,
+        body: req.body.blog.body
+    }, function(err, blog){
+        if(err){
+            console.log(err);
+        }else{
+            res.redirect("/blogs");
+        }
+    });
+});
 
+// Destory
+app.delete("/blogs/:id", function(req, res){
+    Blog.findByIdAndRemove(req.params.id, function(err, blog) {
+        if(err){
+            console.log(err);
+        }else{
+            res.redirect("/blogs");
+        }
+    });
+});
 
 app.listen(3000, function(){
     console.log("blog server started on port 3000");

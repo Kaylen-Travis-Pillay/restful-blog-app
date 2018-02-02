@@ -24,11 +24,17 @@
             </div>
             <div class="twelve wide column">
                 <p>
-                    <%= blog.body.substring(0,200) %>...
+                    <strong>
+                        <span>
+                            <%= blog.title %>
+                        </span>
+                    </strong>
+                    <br>
+                    <%= blog.body.substring(0,100) %>...
                     <br>
                     <strong>
                         <em>
-                            <span><%= blog.created %></span>
+                            <span>Created: <%= blog.created %></span>
                         </em>
                     </strong>
                 </p>
